@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Star, ArrowRight, BookOpen, Award } from "lucide-react";
+import { Star, ArrowRight, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   const courses = [
@@ -57,14 +58,17 @@ const Courses = () => {
               Pilih kelas yang sesuai dengan kebutuhan karirmu
             </p>
           </div>
-          <Button variant="link" className="mt-4 md:mt-0 text-primary">
-            Lihat Semua <ArrowRight className="w-4 h-4 ml-1" />
-          </Button>
+          <Link to="/courses">
+            <Button variant="link" className="mt-4 md:mt-0 text-primary">
+              Lihat Semua <ArrowRight className="w-4 h-4 ml-1" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {courses.map((course, index) => (
-            <div
+            <Link
+              to={`/course/${index + 1}`}
               key={course.title}
               className="course-card group animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -110,7 +114,7 @@ const Courses = () => {
                   <span className="text-primary font-bold">{course.price}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

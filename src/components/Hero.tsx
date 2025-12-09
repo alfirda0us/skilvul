@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const categories = [
@@ -38,7 +39,9 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-6">
-              <Button variant="hero">Cari Kelas</Button>
+              <Link to="/courses">
+                <Button variant="hero">Cari Kelas</Button>
+              </Link>
 
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-3">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, BookOpen, Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Programs = () => {
   const programs = [
@@ -55,9 +56,9 @@ const Programs = () => {
               <p className="text-muted-foreground text-sm mb-4">
                 {program.description}
               </p>
-              <div className="flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+              <Link to="/programs" className="flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
                 Lihat Detail <ArrowRight className="w-4 h-4 ml-1" />
-              </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -76,9 +77,11 @@ const Programs = () => {
               Kuasai strategi menjadi freelancer profesional untuk tingkatkan
               pendapatan secara langsung bersama para pakar berpengalaman.
             </p>
-            <Button variant="hero">
-              Daftar Sekarang <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <Link to="/programs">
+              <Button variant="hero">
+                Daftar Sekarang <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

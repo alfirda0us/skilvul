@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Impact = () => {
   const stats = [
@@ -27,10 +28,14 @@ const Impact = () => {
             pembelajaran keterampilan digital dengan metode "blended-learning".
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="outline">Dampak Kami</Button>
-            <Button variant="ghost" className="text-primary">
-              Lihat Showcase <ArrowRight className="w-4 h-4 ml-1" />
-            </Button>
+            <Link to="/programs">
+              <Button variant="outline">Dampak Kami</Button>
+            </Link>
+            <Link to="/courses">
+              <Button variant="ghost" className="text-primary">
+                Lihat Showcase <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -81,9 +86,11 @@ const Impact = () => {
             <p className="opacity-80 mb-6">
               Mapping out Gaps and Opportunities in Talent Capabilities in Indonesia
             </p>
-            <Button className="bg-background text-foreground hover:bg-background/90">
-              Unduh Gratis <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-background text-foreground hover:bg-background/90">
+                Unduh Gratis <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
